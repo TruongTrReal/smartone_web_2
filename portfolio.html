@@ -24,23 +24,23 @@
             <!-- portfolio summary box  -->
             <div class="portfolioSummaryBox">
 
-                <h2 class="portfolioSummaryText" style="color: #ce414a;">-11,070,000</h2>
+                <h2 class="portfolioSummaryText" id="totalProfit" style="color: #ce414a;">-11,070,000</h2>
                 <div class="totalPercentChangeBox" style="
                     margin-top: 1.5%;    
                     border: 2px solid #ce414a;
                     background-color: #ffdadb;
                     color: #ce414a;
                 ">
-                    <p style="margin-top: -1px;">-1.05 %</p>
+                    <p id="totalGainPercentage" style="margin-top: -1px;">-1.05 %</p>
                 </div>
-                <h2 class="portfolioSummaryText" style="margin-top: 4.3%; color: #11a45e;">+12,000,000</h2>
-                <h2 class="portfolioSummaryText" style="margin-top: 1.9%;">1,051,820,000</h2>
-                <h2 class="portfolioSummaryText" style="margin-top: 1.9%;">1,040,750,000</h2>
+                <h2 class="portfolioSummaryText" id="todayProfit" style="margin-top: 4.3%; color: #11a45e;">+12,000,000</h2>
+                <h2 class="portfolioSummaryText" id="totalBudget" style="margin-top: 1.9%;">1,051,820,000</h2>
+                <h2 class="portfolioSummaryText" id="totalMarketValue" style="margin-top: 1.9%;">1,040,750,000</h2>
             </div>
 
             <!-- portfolio box, toggle between hidden and show  -->
             <div class="portfolioBox">
-                <button onclick="changeAccountNumber()">Change Account Number</button>
+
                 <!-- New stock input form -->
                 <form id="addStockForm">
                     <input type="text" id="symbolInput" placeholder="Symbol*" maxlength="6" oninput="this.value = this.value.toUpperCase();" required>
@@ -56,6 +56,11 @@
                     <button type="submit">Add Stock</button>
                 </form>
 
+                <input style="height: 1vh; margin-top: 1vh;" type="text" id="changeAccountNumber" placeholder="sua so tai khoan*" maxlength="6" oninput="this.value = this.value.toUpperCase();">
+                <button style="height: 1vh;margin-top: 1vh;" onclick="changeAccountNumber()">Change Account Number</button>
+
+                <input style="height: 1vh;margin-top: 1vh;" type="text" id="changeTodayProfitNumber" placeholder="VD: +15,000,000, -20,000,000,..." maxlength="15" oninput="this.value = this.value.toUpperCase();">
+                <button style="height: 1vh;margin-top: 1vh;" onclick="changeTodayProfitNumber()">Change Profit Today</button>
             </div>
 
             <div class="stockContainer">
@@ -79,7 +84,7 @@
             // Function to change the account number
             function changeAccountNumber() {
                 // You can implement logic to generate a new account number or get it from user input
-                var newAccountNumber = prompt("Enter the new account number:");
+                var newAccountNumber = $('#changeAccountNumber').val();
         
                 // Update the account number on the page and save to local storage
                 if (newAccountNumber !== null) { // Check if user canceled the prompt
@@ -93,6 +98,20 @@
                     localStorage.setItem("accountNumber", newAccountNumber);
                 }
             }
+
+            // Function to change the account number
+            function changeTodayProfitNumber() {
+                // You can implement logic to generate a new account number or get it from user input
+                var newTodayProfitNumber = $('#changeTodayProfitNumber').val();
+        
+                // Update the account number on the page and save to local storage
+                if (newTodayProfitNumber !== null) { // Check if user canceled the prompt
+                    document.getElementById("todayProfit").textContent = newTodayProfitNumber;
+        
+                    // Save the updated account number to local storage
+                    localStorage.setItem("accountTodayProfit", newTodayProfitNumber);
+                }
+            }
         
             // Function to render the account number from local storage
             function renderAccountNumberFromLocalStorage() {
@@ -100,6 +119,7 @@
                 if (typeof(Storage) !== "undefined") {
                     // Retrieve the stored account number
                     var storedAccountNumber = localStorage.getItem("accountNumber");
+                    var storedTodayProfit = localStorage.getItem("accountTodayProfit");
         
                     // Update the account number on the page if it exists
                     if (storedAccountNumber !== null) {
@@ -108,6 +128,10 @@
                         for (var i = 0; i < accountNumberElements.length; i++) {
                             accountNumberElements[i].textContent = storedAccountNumber;
                         }
+                    };
+
+                    if (storedTodayProfit !== null) {
+                        document.getElementById("todayProfit").textContent = storedTodayProfit;
                     }
                 } else {
                     console.error("Local storage is not supported");

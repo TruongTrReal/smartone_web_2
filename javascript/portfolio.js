@@ -1,6 +1,7 @@
 // script.js
 $(document).ready(() => {
 
+    calculateTotalPortfolio()
     renderStocksFromLocalStorage();
     updateColors();
 
@@ -73,10 +74,6 @@ $(document).ready(() => {
             t2: t2.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             cpthuong: cpthuong.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
         };
-
-
-        // Append the new stock to the portfolio
-        // $(".stockContainer").append(newStock);
 
         // Save data to local storage
         saveStockToLocalStorage(newStock);
@@ -169,6 +166,46 @@ function renderStocksFromLocalStorage() {
     }
 };
 
+// Function to render stocks from local storage
+function calculateTotalPortfolio() {
+    // Check if localStorage is supported
+    if (typeof(Storage) !== "undefined") {
+        // Retrieve sto#d93742 data
+        var stocks = JSON.parse(localStorage.getItem("stocks")) || [];
+
+        function convertStringToInteger(stringWithCommas) {
+            // Remove commas globally and parse the string to an integer
+            return parseInt(stringWithCommas.replace(/,/g, ""), 10);
+        };
+
+        let totalBudget = 0;
+        let totalProfit = 0;
+        let totalMarketValue = 0;
+        let totalGainPercentage = 0;
+
+        // Iterate over the stocks and render them
+        stocks.forEach(function(stock) {
+            var budget = convertStringToInteger(stock.tongvon);
+            var marketValue = convertStringToInteger(stock.giatrithitruong);
+            var profit = convertStringToInteger(stock.lailo);
+            totalBudget += budget;
+            totalProfit += profit;
+            totalMarketValue += marketValue;
+        });
+
+        totalGainPercentage = ((totalMarketValue-totalBudget)/totalBudget)*100;
+
+        // Update the content of specific elements with calculated values using jQuery
+        $('#totalBudget').text(totalBudget.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        $('#totalProfit').text((totalProfit >= 0 ? '+' : '-') + Math.abs(totalProfit).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        $('#totalMarketValue').text(totalMarketValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        $('#totalGainPercentage').text((totalGainPercentage >= 0 ? '+' : '-') + Math.abs(totalGainPercentage).toFixed(2) + '%');
+
+    } else {
+        console.error("Local storage is not supported");
+    }
+};
+
 function updateColors() {
     // Loop through each stock
     $(".stock").each(function() {
@@ -176,38 +213,68 @@ function updateColors() {
 
         // Change symbol color based on percentChange
         var symbolElement = $(this).find(".symbol");
-        if (percentChange > 0) {
-            symbolElement.css("color", "#00ab55");
-        } else if (percentChange < 0) {
-            symbolElement.css("color", "#d93742");
-        } else {
-            // Handle case when percentChange is 0
-            symbolElement.css("color", "black");
-        }
+        changeColorBasedOnValue(symbolElement, percentChange);
 
         // Change lailo color based on percentChange
         var lailoElement = $(this).find(".lailo");
-        if (percentChange > 0) {
-            lailoElement.css("color", "#00ab55");
-        } else if (percentChange < 0) {
-            lailoElement.css("color", "#d93742");
-        } else {
-            // Handle case when percentChange is 0
-            lailoElement.css("color", "black");
-        }
+        changeColorBasedOnValue(lailoElement, percentChange);
 
         // Change background image based on percentChange
         var unhideDetailElement = $(this).find(".unhideDetail");
-        if (percentChange > 0) {
-            unhideDetailElement.css("background-image", "url('image/stock_hide_positive.jpg')");
-        } else if (percentChange < 0) {
-            unhideDetailElement.css("background-image", "url('image/stock_hide_negative.jpg')");
-        } else {
-            // Handle case when percentChange is 0
-            unhideDetailElement.css("background-image", "url('image/stock_hide_positive.jpg')");
-        }
+        changeBackgroundImageBasedOnValue(unhideDetailElement, percentChange);
     });
-};
+
+    // Update the color of specific elements based on their content
+    var totalProfit = parseFloat($("#totalProfit").text().replace(',', ''));
+    var todayProfit = parseFloat($("#todayProfit").text().replace(',', ''));
+
+    changeColorBasedOnValue($("#totalProfit"), totalProfit);
+    changeColorBasedOnValue($("#todayProfit"), todayProfit);
+
+    // Update the color of the totalGainPercentage element
+    var totalGainPercentage = parseFloat($("#totalGainPercentage").text().replace('%', ''));
+    changeColorBasedOnValue($("#totalGainPercentage"), totalGainPercentage);
+
+    // Update the color of the totalPercentChangeBox element
+    var totalPercentChangeBox = $(".totalPercentChangeBox");
+    if (totalGainPercentage > 0) {
+        totalPercentChangeBox.css({
+            "border": "2px solid #00ab55",
+            "background-color": "#d7fadf",
+            "color": "#00ab55"
+        });
+    } else {
+        // Handle case when totalGainPercentage is <= 0
+        totalPercentChangeBox.css({
+            "border": "2px solid #ce414a",
+            "background-color": "#ffdadb",
+            "color": "#ce414a"
+        });
+    }
+}
+
+// Helper function to change color based on the value
+function changeColorBasedOnValue(element, value) {
+    if (value > 0) {
+        element.css("color", "#00ab55");
+    } else if (value < 0) {
+        element.css("color", "#d93742");
+    } else {
+        element.css("color", "black");
+    }
+}
+
+// Helper function to change background image based on the value
+function changeBackgroundImageBasedOnValue(element, value) {
+    if (value > 0) {
+        element.css("background-image", "url('image/stock_hide_positive.jpg')");
+    } else if (value < 0) {
+        element.css("background-image", "url('image/stock_hide_negative.jpg')");
+    } else {
+        element.css("background-image", "url('image/stock_hide_positive.jpg')");
+    }
+}
+
 
 // Function to save data to local storage
 function saveStockToLocalStorage(stock) {
