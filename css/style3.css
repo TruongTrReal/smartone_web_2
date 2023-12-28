@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    font-family: "Open Sans";
+    font-weight: 400;
+    background-color: #f3f3f3;
+}
+
+.iphone-clock {
+  position: fixed;
+  top: 0.8%;
+  left: 7.5%;
+  color: black;
+  padding: 10px;
+  font-size: 2.4em;
+  z-index: 100;
+  background: none;
+  font-family: "SF Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#clock {
+  font-weight: 600;
+}
+
+
+
+.invisible {
+  height: 7em;
+  width: 25%;
+  position: absolute;
+  background: none;
+  top: 15%;
+  left: 70%;
+  border: none;
+}
+.stk_container {
+  position: fixed;
+  top: 6.35%;
+  left: 75.4%;
+  background: none;
+  height: 5em;
+  width: 11em;
+  z-index: 200;
+}
+#stk_so {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 1.9em;
+  color: black;
+  text-align: center;
+}
+#stk_duoi {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 2em;
+  color: white;
+  position: absolute;
+  right: -0.5%;
+  top: -2%;
+}
+
+/* STYLE CÁI ẢNH ĐẦU TRANG */
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: auto;
+  width: 100%;
+}
+
+#img1 {
+    width: 100%;
+    object-fit: contain;
+
+}
+
+#logoSafy2 {
+  position: fixed;
+  right:0;
+  top: 27.8%;
+  width: 15em;
+  height: auto;
+  z-index: 100;
+}
+
+
+#turnback {
+    background: none;
+    border: none;
+    width: 400px;
+    height: 100px;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 20;
+}
+
+.btn-lenh {
+    position: relative;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 96.5%;
+    height: 135px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .data-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #stock_name_data {
+    position: absolute;
+    top: 2.3em;
+    left: 1.5em;
+    width: auto;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+  }
+  #buying_price_data {
+    position: absolute;
+    top: 1.1em;
+    left: 16%;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex;
+  }
+  #market_price_data {
+    position: absolute;
+    top: 1.1em;
+    left: 29.5%;
+    width: 12em;
+    height: auto;
+    display: flex;
+  }
+  #volume_data {
+    position: absolute;
+    top: 1.1em;
+    left: 52%;
+    width: 12em;
+    height: auto;
+    display: flex;
+  }
+  #profit_data {
+    position: absolute;
+    top: 1.1em;
+    left: 84%;
+    width: 8em;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+
+.text__mck {
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 2.2em;
+    color: #323232;
+}
+
+.text__mck2 {
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 2.1em;
+    color: #323232;
+}
+
+.text__mck3 {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 1.65em;
+    color: #323232;
+    text-align: right;
+}
+
+
+
+.text__gray {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 1.8em;
+    color: #8a8a8a;
+    margin-top: 5px;
+  }
+
+#add_lenh_form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    padding: 20px;
+    width: 80%;
+    z-index: 100;
+}
+
+form input {
+    width: 30%;
+    height: 50px;
+    font-size: 1.5em;
+}
+
+#iconbuysell {
+  width: 100%;
+  height: auto;
+  z-index: 230;
+  position: fixed;
+  bottom: 2%;
+  right: -5%;
+  opacity: 0.9;
+}
+
+#button_add {
+  position: absolute;
+  bottom:5em;
+  left: 10em;
+  width: 150px;
+  height: 150px;
+  z-index: 240;
+  background: none;
+  border: none;
+
+}
+
+.chokhop {
+  height: 220px;
+}
+
+.sua_huy {
+  display: flex; /* use flexbox */
+  justify-content: center; /* center horizontally */
+  align-items: flex; /* center vertically */
+  width: 100%;
+  margin: 13% 0 0 0;
+  padding: 0.5em;
+
+}
+
+.sua-btn {
+  background-color: #b31c2d;
+  font-size: 1.7em;
+  color: #fef4f5;
+  text-align: center;
+  line-height: 60px;
+  border: 3px solid #b31c2d;
+}
+
+
+.huy-btn {
+  background-color: white;
+  font-size: 1.7em;
+  z-index: 10;
+  color: #808080;
+  border: 3px solid #808080;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 600;
+}
+
+.box {
+  width: 47%;
+  height: 60px;
+  margin: auto;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.fill {
+  color: #eea83c;
+  background-color: #fff6e2;
+  width: 113%;
+  height: 1.7em;
+  line-height: 1.7em;
+  border-radius: 10px;
+  text-align: center;
+}

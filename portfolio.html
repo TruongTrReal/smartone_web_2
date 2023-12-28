@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6fTbmF2EEfbaJKdkxFXVjWDW3f5" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/portfolioStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <script src="javascript/portfolio.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Inside the .container div, after the .portfolioFooter div -->
+            <button id="togglePortfolio"></button>
+
+            <!-- acount number box  -->
+            <div class="accountNumberBox">
+                <h3 class="accountNumber" id="accountNumber" style="margin-left: 9.2vw;">266588</h3>
+                <h3 class="accountNumber" id="accountNumber" style="margin-left: 23vw;">266588</h3>
+                <h3 class="accountNumber" id="accountNumber" style="margin-left: 23vw; color: black;">266588</h3>
+            </div>
+
+            <!-- portfolio summary box  -->
+            <div class="portfolioSummaryBox">
+
+                <h2 class="portfolioSummaryText" style="color: #ce414a;">-11,070,000</h2>
+                <div class="totalPercentChangeBox" style="
+                    margin-top: 1.5%;    
+                    border: 2px solid #ce414a;
+                    background-color: #ffdadb;
+                    color: #ce414a;
+                ">
+                    <p style="margin-top: -1px;">-1.05 %</p>
+                </div>
+                <h2 class="portfolioSummaryText" style="margin-top: 4.3%; color: #11a45e;">+12,000,000</h2>
+                <h2 class="portfolioSummaryText" style="margin-top: 1.9%;">1,051,820,000</h2>
+                <h2 class="portfolioSummaryText" style="margin-top: 1.9%;">1,040,750,000</h2>
+            </div>
+
+            <!-- portfolio box, toggle between hidden and show  -->
+            <div class="portfolioBox">
+                <button onclick="changeAccountNumber()">Change Account Number</button>
+                <!-- New stock input form -->
+                <form id="addStockForm">
+                    <input type="text" id="symbolInput" placeholder="Symbol*" maxlength="6" oninput="this.value = this.value.toUpperCase();" required>
+                    <input type="number" id="ownPriceInput" placeholder="Gia mua*" required>
+                    <input type="number" id="marketPriceInput" placeholder="gia TT*" required>
+                    <input type="number" id="volumeInput" placeholder="Volume*" required>
+                    <input type="number" id="outroomInput" placeholder="KL Outroom" >
+                    <input type="number" id="t0Input" placeholder="KL t0" >
+                    <input type="number" id="t1Input" placeholder="KL t1" >
+                    <input type="number" id="t2Input" placeholder="KL t2" >
+                    <input type="number" id="otherVolumeInput" placeholder="KL Khac" >
+                    <input type="number" id="rewardVolumeInput" placeholder="KL CP Thuong/Co tuc" >
+                    <button type="submit">Add Stock</button>
+                </form>
+
+            </div>
+
+            <div class="stockContainer">
+                
+                <div class="stock" id="C4G" >
+                    <div class="unhideDetail">
+                        <div class="detailTextBox">
+                            <h2 class="symbol">C4G
+                                <img 
+                                    src="image/vdown.png"
+                                    class="updownSymbol"
+                                />
+                            </h2>
+                            <h2 class="ownPrice">12.42</h2>
+                            <h2 class="marketPrice">11.80</h2>
+                            <h2 class="volume">30,000</h2>
+                            <div class="percentChangeBox" style="
+                                width: 15vw;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 5.5%;
+                                margin-top: 0.2%;">
+                                <p class="percentChange" style="font-size: 3vw;color: white;">+4.98%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hideDetail">
+                        <div class="valueDetail">
+                            <h2 class="tongvon">270,410,000</h2>
+                            <h2 class="giatrithitruong">275,000,000</h2>
+                            <h2 class="lailo">+4,590,000</h2>
+                        </div>
+                        <div class="vol1">
+                            <h2 class="tongkl">10,000</h2>
+                            <h2 class="klthuong">0</h2>
+                            <h2 class="klfs">0</h2>
+                            <h2 class="klkd">0</h2>
+                            <h2 class="outroom">0</h2>
+                        </div>
+                        <div class="vol2">
+                            <h2 class="klkhac">0</h2>
+                            <h2 class="cpthuong">0</h2>
+                        </div>
+                        <div class="vol3">
+                            <h2 class="t0">0</h2>
+                            <h2 class="t1">10,000</h2>
+                            <h2 class="t2">0</h2>
+                        </div>
+                        <button class="deleteButton">Delete</button>
+                    </div>
+                </div>
+
+                <div class="emptyBox"></div>
+            </div>
+
+            <!-- portfolio footer  -->
+            <div class="portfolioFooter">
+                <img 
+                    src="image/buysell_footer.jpg"
+                    style="width: 100%;margin-bottom: -1%;"
+                >
+            </div>
+        </div>
+
+        <!-- Bootstrap JS and Popper.js -->
+        <script>
+            // Function to change the account number
+            function changeAccountNumber() {
+                // You can implement logic to generate a new account number or get it from user input
+                var newAccountNumber = prompt("Enter the new account number:");
+        
+                // Update the account number on the page and save to local storage
+                if (newAccountNumber !== null) { // Check if user canceled the prompt
+                    var accountNumberElements = document.getElementsByClassName("accountNumber");
+        
+                    for (var i = 0; i < accountNumberElements.length; i++) {
+                        accountNumberElements[i].textContent = newAccountNumber;
+                    }
+        
+                    // Save the updated account number to local storage
+                    localStorage.setItem("accountNumber", newAccountNumber);
+                }
+            }
+        
+            // Function to render the account number from local storage
+            function renderAccountNumberFromLocalStorage() {
+                // Check if localStorage is supported
+                if (typeof(Storage) !== "undefined") {
+                    // Retrieve the stored account number
+                    var storedAccountNumber = localStorage.getItem("accountNumber");
+        
+                    // Update the account number on the page if it exists
+                    if (storedAccountNumber !== null) {
+                        var accountNumberElements = document.getElementsByClassName("accountNumber");
+        
+                        for (var i = 0; i < accountNumberElements.length; i++) {
+                            accountNumberElements[i].textContent = storedAccountNumber;
+                        }
+                    }
+                } else {
+                    console.error("Local storage is not supported");
+                }
+            }
+        
+            // Render the account number from local storage when the page loads
+            renderAccountNumberFromLocalStorage();
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-Z7JkA9qxE2e1/LI+vxZlET8VX7XZSWIo3bChDfLBgfc3x1a8+1AZgTCMk6iPdg3I" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6fTbmF2EEfbaJKdkxFXVjWDW3f5" crossorigin="anonymous"></script>
+    </body>
+</html>

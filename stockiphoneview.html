@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <style>
+            img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="iphone-clock">
+            <div id="clock"></div>
+        </div>
+        <button id="turnback" onclick="window.location.href='landingpage.html'"></button>
+        <div id="header">
+            <img id="img1" src="image/header1.jpg">
+            <button id="button_add"></button>
+        </div>
+
+        <img id="img1" src="image/header1.jpg" style="margin-top: -8px;">
+        <div class="list_container" id="main-content">
+            
+                <div class="mck_block">
+
+                    <div class="tongquandanhmuc">
+                        <img id="img2" class="sticky" src="image/f1.jpg">
+                        <img id="img2" src="image/tongquan0.jpg">
+                        <img id="img2" src="image/tongquan1.jpg" style="margin-top: -3px;">
+                    </div>
+
+                    <div class="sodutien">
+                        <img id="img2" class="sticky" src="image/f2.jpg">
+                        <img id="img2" src="image/sodutien.jpg">
+                    </div>
+
+
+
+                </li>
+
+                <div id="container">
+                    <div id="" class="ff3 sticky">
+                        <img id="logoSafy" src="image/logosafy.gif">
+                    </div>
+                    <li class="mck_block">
+                        
+                        <img id="img2" src="image/belly.jpg">
+                        <div id="lailo">
+                                <div id="lailo_text" style="color:white;"><p>Lãi/lỗ:</p></div>
+                                <div id="loinhuan_text"></div>
+                                <div id="phantram_text"></div>
+                        </div>
+                    </li>
+                    <button id="sort_button"></button>
+                    
+                </div>
+                <img id="knee" src="image/knee.jpg">
+                    <div class="blank"></div>
+                <form id="form">
+                    <input type="text" id="stock_name" placeholder="Mã chứng khoán">
+                    <input type="text" id="id" placeholder="HSX, HNX, UPCOM,...">
+                    <input type="number" id="buying_price" placeholder="Giá mua">
+                    <input type="number" id="market_price" placeholder="Giá thị trường">
+                    <input type="number" id="volume" placeholder="khối lượng đã về">
+                    <input type="number" id="t0" placeholder="T0">
+                    <input type="number" id="t1" placeholder="T1">
+                    <input type="number" id="t2" placeholder="T2">
+                    <input type="number" id="fs" placeholder="khối lượng FS">
+                    <input type="number" id="kl_outroom" placeholder="khối lượng Out room">
+                    <input type="number" id="kl_khac" placeholder="KL khác">
+                    <button id="submit">Thêm mã chứng khoán</button>
+                </form>
+                <form id="form2">
+                    <input type="number" id="loinhuan" placeholder="tổng lợi nhuận danh mục">
+                    <input type="number" id="phantram" placeholder="tổng phần trăm lãi danh mục">
+                    <button id="submit2">Cài đặt</button>
+                </form>
+            </button>
+            
+        </div>
+        <img id="iconbuysell" src="image/iconbuysell.png">
+        <script src="javascript/ProfitPage.js"></script>
+    </body>
+</html>

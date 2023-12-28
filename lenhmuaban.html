@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="css/style3.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=SF+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <style>
+            img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <body>
+      <div class="iphone-clock">
+        <div id="clock"></div>
+      </div>
+      
+
+        <button id="turnback" onclick="window.location.href='landingpage.html'"></button>
+        <img id="header" src="image/lenhmuaban_header.jpg">
+        <img id="img1" src="image/lenhmuaban_header222.jpg">
+        <video id="logoSafy2" autoplay loop muted>
+          <source src="image/logosafy2.gif" type="gif">
+        </video>
+        <button id="button_add"></button>
+
+        <div class="container" id="container">
+
+        </div>
+
+        <form id="add_lenh_form">
+          <select id="order-type" name="order-type" placeholder="" style="width: 150px;height: 40px;">
+            <option value="">mua hay bán</option>
+            <option value="Mua">Mua</option>
+            <option value="Bán">Bán</option>
+          </select>
+          <select id="trang-thai" name="order-type" placeholder="" style="width: 150px;height: 40px;">
+            <option value="">trạng thái</option>
+            <option value="chokhop">chờ khớp</option>
+            <option value="khop">đã khớp</option>
+            <option value="huy">hủy</option>
+          </select>
+          <input type="text" id="stock-name" name="stock-name" placeholder="Mã chứng khoán">
+          <input type="text" id="time" name="time" placeholder="Giờ của lệnh, vd 11:11 ...">
+          <input type="text" id="price" name="price" placeholder="giá khớp vd 12.5">
+          <input type="text" id="price1" name="price" placeholder="giá khớp vd 12.50">
+          <input type="text" id="volume" placeholder="khối lượng vd 100000">
+          <input type= "submit" id="submit">
+      </form>
+
+      <img id="iconbuysell" src="image/trangmuabanlogo.png">
+      <script src="javascript/lenhmuaban.js"></script>
+    </body>
+</html>

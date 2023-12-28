@@ -1,0 +1,596 @@
+html,
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  font-weight: 400;
+  height: 100vh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  z-index: 1000;
+}
+
+.iphone-clock {
+  text-align: center;
+  position: fixed;
+  top: 0.8%;
+  left: 7.5%;
+  color: black;
+  padding: 10px;
+  font-size: 2.4em;
+  z-index: 100;
+  background: none;
+  font-family: "SF Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#clock {
+  font-weight: 600;
+}
+
+#turnback {
+  background: none;
+  border: none;
+  width: 400px;
+  height: 100px;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+/* STYLE CÁI ẢNH ĐẦU TRANG */
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: auto;
+  width: 100%;
+}
+#img1 {
+  width: 100%;
+  object-fit: contain;
+}
+#logoSafy {
+  width: 29%;
+  margin-bottom: 5px;
+  
+}
+.ff3 {
+  width: 100%;
+  height: auto;
+  background-image: url('image/f3.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: right;
+  z-index: 200;
+}
+#img2 {
+  width: 100%;
+  object-fit: contain;
+} /* STYLE CÁC NÚT VÔ HÌNH */
+.invisible {
+  height: 7em;
+  width: 25%;
+  position: absolute;
+  background: none;
+  top: 15%;
+  left: 70%;
+  border: none;
+} /* STYLE CÁI LIST CONTENT */
+.list_container {
+  width: 100%;
+  overflow-y: scroll;
+}
+.list-container::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.list-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#lailo {
+  width: 92%;
+  height: 125px;
+  background-color: #4a3f40;
+  border-radius: 12px;
+  margin: auto;
+}
+#lailo #lailo_text {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 1.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  margin-left: 2%;
+  height: 100%;
+
+}
+#lailo #loinhuan_text {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 2.4em;
+  color: #26c255;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 0 0 37%;
+  padding: 0 0 0 0;
+}
+#lailo #phantram_text {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 2.4em;
+  color: #26c255;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  height: 100%;
+  margin: -13.9% 10% 0 0;
+}
+ul#block1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+#button_add {
+  height: 10em;
+  width: 33%;
+  margin: 100px;
+  position: absolute;
+  background: none;
+  top: 50%;
+  left: -9%;
+  border: none;
+}
+#form {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: brown;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  padding: 20px;
+  width: 80%;
+  z-index: 500;
+}
+form input {
+  width: 60%;
+  height: 50px;
+  font-size: 1.5em;
+}
+form #submit {
+  width: 80%;
+  height: 100px;
+  font-size: 2em;
+  font-weight: 800;
+  background-color: #26c255;
+}
+#container_add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.button_mck {
+  position: relative;
+  margin: auto;
+  margin-top: 2px;
+  background-color: #4a3f40;
+  border-radius: 8px;
+  width: 92%;
+  height: 135px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1;
+}
+.button_mck.expanded {
+  height: 470px;
+  width: 92%;
+}
+.button_mck .hide {
+  display: none;
+}
+.button_mck.expanded .hide {
+  display: flex;
+}
+.data-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#stock_name_data {
+  position: absolute;
+  top: 2.3em;
+  left: 1em;
+  width: auto;
+  height: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+#buying_price_data {
+  position: absolute;
+  top: 1.65em;
+  left: 20.6%;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex;
+}
+#market_price_data {
+  position: absolute;
+  top: 1.65em;
+  left: 40.5%;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex;
+}
+#volume_data {
+  position: absolute;
+  top: 1.65em;
+  left: 60.6%;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex;
+}
+#profit_data {
+  position: absolute;
+  top: 1.65em;
+  left: 84%;
+  width: 8em;
+  height: auto;
+  display: flex;
+  align-items: flex;
+}
+#totalCapital_data {
+  border-radius: 8px;
+  position: absolute;
+  top: 31%;
+  left: 1%;
+  width: 32%;
+  height: 22%;
+  background: #3d3637;
+  align-items: flex;
+}
+#FSvolumes_data label {
+  float: left;
+  width: 95%;
+  text-align: left;
+}
+#FSvolumes_data div {
+  float: right;
+  width: 95%;
+  text-align: right;
+}
+#FSvolumes_data .left_and_right {
+  display: flex;
+  margin: 5px;
+}
+#FSvolumes_data {
+  border-radius: 8px;
+  position: absolute;
+  top: 55%;
+  left: 1%;
+  width: 32%;
+  height: 31%;
+  background: #3d3637;
+}
+#outRoom_data label {
+  float: left;
+  width: 95%;
+  text-align: left;
+}
+#outRoom_data div {
+  float: right;
+  width: 95%;
+  text-align: right;
+}
+#outRoom_data .left_and_right {
+  display: flex;
+  margin: 5px;
+}
+#outRoom_data {
+  border-radius: 8px;
+  position: absolute;
+  top: 88%;
+  left: 1%;
+  width: 32%;
+  height: 10%;
+  background: #3d3637;
+}
+#marketValue_data {
+  border-radius: 8px;
+  position: absolute;
+  top: 31%;
+  left: 34%;
+  width: 32%;
+  height: 22%;
+  background: #3d3637;
+  align-items: flex;
+}
+#KLKD_data {
+  border-radius: 8px;
+  position: absolute;
+  top: 55%;
+  left: 34%;
+  width: 32%;
+  height: 20%;
+  background: #3d3637;
+  align-items: flex;
+}
+#KLKhac_data {
+  border-radius: 8px;
+  position: absolute;
+  top: 77%;
+  left: 34%;
+  width: 32%;
+  height: 21%;
+  background: #3d3637;
+  align-items: flex;
+}
+#KLKhac_data img {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 70%;
+}
+#totalRevenue_data {
+  border-radius: 8px;
+  position: absolute;
+  top: 31%;
+  left: 67%;
+  width: 32%;
+  height: 22%;
+  background: #3d3637;
+  align-items: flex;
+}
+#KLmua_data {
+  border-radius: 8px;
+  position: absolute;
+  top: 55%;
+  left: 67%;
+  width: 32%;
+  height: 43%;
+  background: #3d3637;
+  align-items: flex;
+}
+#KLmua_data label {
+  margin: 0;
+  float: center;
+  text-align: center;
+}
+#KLmua_data div {
+  float: right;
+  text-align: center;
+}
+#KLmua_data .innerdiv {
+  width: 80%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #555052;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#KLmua_data .left_and_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+input[type="text"] {
+  margin: 10px 0;
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input[type="submit"] {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #f483f4;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.text__mck {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 2.2em;
+}
+.text__san {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #e46c04;
+  margin-top: 0.3em;
+}
+.text__gray {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1.6em;
+  color: #b1b1b1;
+}
+.text__number {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 1.75em;
+  color: white;
+  margin-top: 0.8em;
+}
+.text__number__bigger {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 2em;
+  color: white;
+  margin-top: 0.55em;
+}
+.text__number__biggerfs {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 2em;
+  color: white;
+}
+.text__number__big {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 1.8em;
+  color: white;
+  margin-top: 0.35em;
+}
+.text__thin {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1.75em;
+  color: white;
+}
+.text__gray__thin {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1.65em;
+  color: #b1b1b1;
+} /* STYLE CÁC ẢNH PHÍA BÊN DƯỚI */
+#knee {
+  width: 100%;
+  margin-top: -7px;
+  height: auto;
+  z-index: 2;
+  position: relative;
+}
+#iconbuysell {
+  width: 60%;
+  height: auto;
+  z-index: 230;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  opacity: 0.9;
+}
+.blank {
+  width: 100px;
+  height: 350px;
+  background-color: white;
+}
+#form2 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: brown;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  padding: 20px;
+  width: 80%;
+  z-index: 100;
+}
+form2 input {
+  width: 50%;
+  height: 50px;
+  font-size: 1.5em;
+}
+form2 #submit2 {
+  width: 80%;
+  height: 100px;
+  font-size: 2em;
+  font-weight: 800;
+  background-color: #26c255;
+}
+#form3 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: brown;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  padding: 20px;
+  width: 80%;
+  z-index: 100;
+}
+form3 input {
+  width: 50%;
+  height: 50px;
+  font-size: 1.5em;
+}
+form3 #submit3 {
+  width: 80%;
+  height: 100px;
+  font-size: 2em;
+  font-weight: 800;
+  background-color: #26c255;
+}
+#sort_button {
+  position: absolute;
+  top: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.stk_container {
+  position: absolute;
+  top: 20.7%;
+  left: 75.2%;
+  background: none;
+  height: 5em;
+  width: 11em;
+}
+#stk_so {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 1.9em;
+  color: black;
+  text-align: center;
+}
+#stk_duoi {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 2.0em;
+  color: white;
+  position: absolute;
+  right: -0.1%;
+  top: -2.5%;
+}
+button {
+  width: 10em;
+  height: 5em;
+  z-index: 150;
+}
