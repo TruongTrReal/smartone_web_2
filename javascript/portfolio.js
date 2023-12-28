@@ -199,12 +199,12 @@ function updateColors() {
         // Change background image based on percentChange
         var unhideDetailElement = $(this).find(".unhideDetail");
         if (percentChange > 0) {
-            unhideDetailElement.css("background-image", "url('/image/stock_hide_positive.jpg')");
+            unhideDetailElement.css("background-image", "url('image/stock_hide_positive.jpg')");
         } else if (percentChange < 0) {
-            unhideDetailElement.css("background-image", "url('/image/stock_hide_negative.jpg')");
+            unhideDetailElement.css("background-image", "url('image/stock_hide_negative.jpg')");
         } else {
             // Handle case when percentChange is 0
-            unhideDetailElement.css("background-image", "url('/image/default_background.jpg')");
+            unhideDetailElement.css("background-image", "url('image/stock_hide_positive.jpg')");
         }
     });
 };
