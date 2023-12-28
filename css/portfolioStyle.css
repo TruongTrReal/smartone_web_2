@@ -20,7 +20,7 @@
 
 .accountNumberBox {
     position: absolute;
-    top: 15.7vw;
+    top: 15.9vw;
     left: 0;
     width: 100vw;
     height: fit-content;
@@ -40,7 +40,7 @@
 
 .portfolioSummaryBox {
     position: absolute;
-    top: 48vw;
+    top: 49vw;
     left: 0;
     /* background-color: brown; */
     width: 100vw;
