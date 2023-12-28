@@ -7,7 +7,7 @@
 }
 
 .container {
-    background-image: url('/image/model.jpg');
+    background-image: url('image/model.jpg');
     background-repeat: no-repeat;
     background-attachment: local;
     background-position: top;
