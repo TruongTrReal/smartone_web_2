@@ -118,9 +118,9 @@ function renderStocksFromLocalStorage() {
                                 class="updownSymbol"
                             />
                         </h2>
-                        <h2 class="ownPrice" style="font-weight: 500;">${stock.ownPrice}</h2>
-                        <h2 class="marketPrice" style="font-weight: 500;">${stock.marketPrice}</h2>
-                        <h2 class="volume" style="font-weight: 500;">${stock.volume}</h2>
+                        <h2 class="ownPrice" style="font-weight: 600;">${stock.ownPrice}</h2>
+                        <h2 class="marketPrice" style="font-weight: 600;">${stock.marketPrice}</h2>
+                        <h2 class="volume" style="font-weight: 600;">${stock.volume}</h2>
                         <div class="percentChangeBox" style="
                             width: 15vw;
                             display: flex;
