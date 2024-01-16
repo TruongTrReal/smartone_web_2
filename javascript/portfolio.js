@@ -118,9 +118,9 @@ function renderStocksFromLocalStorage() {
                                 class="updownSymbol"
                             />
                         </h2>
-                        <h2 class="ownPrice">${stock.ownPrice}</h2>
-                        <h2 class="marketPrice">${stock.marketPrice}</h2>
-                        <h2 class="volume">${stock.volume}</h2>
+                        <h2 class="ownPrice" style="font-weight: 500;">${stock.ownPrice}</h2>
+                        <h2 class="marketPrice" style="font-weight: 500;">${stock.marketPrice}</h2>
+                        <h2 class="volume" style="font-weight: 500;">${stock.volume}</h2>
                         <div class="percentChangeBox" style="
                             width: 15vw;
                             display: flex;
@@ -135,25 +135,25 @@ function renderStocksFromLocalStorage() {
     
                 <div class="hideDetail">
                     <div class="valueDetail">
-                        <h2 class="tongvon">${stock.tongvon}</h2>
-                        <h2 class="giatrithitruong">${stock.giatrithitruong}</h2>
-                        <h2 class="lailo">${stock.lailo}</h2>
+                        <h2 class="tongvon" style="font-weight: 500;">${stock.tongvon}</h2>
+                        <h2 class="giatrithitruong" style="font-weight: 500;">${stock.giatrithitruong}</h2>
+                        <h2 class="lailo" style="font-weight: 500;">${stock.lailo}</h2>
                     </div>
                     <div class="vol1">
-                        <h2 class="tongkl">${stock.tongkl}</h2>
-                        <h2 class="klthuong">${stock.klthuong}</h2>
-                        <h2 class="klfs">${0}</h2>
-                        <h2 class="klkd">${stock.klkd}</h2>
-                        <h2 class="outroom">${stock.outroom}</h2>
+                        <h2 class="tongkl" style="font-weight: 500;">${stock.tongkl}</h2>
+                        <h2 class="klthuong" style="font-weight: 500;">${stock.klthuong}</h2>
+                        <h2 class="klfs" style="font-weight: 500;">${0}</h2>
+                        <h2 class="klkd" style="font-weight: 500;">${stock.klkd}</h2>
+                        <h2 class="outroom" style="font-weight: 500;">${stock.outroom}</h2>
                     </div>
                     <div class="vol2">
-                        <h2 class="klkhac">${stock.klkhac}</h2>
-                        <h2 class="cpthuong">${stock.cpthuong}</h2>
+                        <h2 class="klkhac" style="font-weight: 500;">${stock.klkhac}</h2>
+                        <h2 class="cpthuong" style="font-weight: 500;">${stock.cpthuong}</h2>
                     </div>
                     <div class="vol3">
-                        <h2 class="t0">${stock.t0}</h2>
-                        <h2 class="t1">${stock.t1}</h2>
-                        <h2 class="t2">${stock.t2}</h2>
+                        <h2 class="t0" style="font-weight: 500;">${stock.t0}</h2>
+                        <h2 class="t1" style="font-weight: 500;">${stock.t1}</h2>
+                        <h2 class="t2" style="font-weight: 500;">${stock.t2}</h2>
                     </div>
                     <button class="deleteButton">Delete</button>
                 </div>
