@@ -1,8 +1,6 @@
 // Database of user credentials
 var database = [
-  { username: "truongadmin", password: "NewPass123@@" },
   { username: "thaison", password: "3303" },
-
 ];
 
 // Check if the entered credentials match with any in the database

@@ -21,9 +21,19 @@ $(document).ready(() => {
 
 
 
-    // Toggle the visibility of .hideDetail when .unhideDetail is clicked
     $(".unhideDetail").click(function() {
+        // Toggle the .hideDetail sibling element
         $(this).siblings(".hideDetail").toggle();
+    
+        // Find the img element within this .unhideDetail
+        var img = $(this).find(".updownSymbol");
+    
+        // Check the current source and toggle it
+        if (img.attr("src") === "image/vdown.png") {
+            img.attr("src", "image/vup.png");
+        } else {
+            img.attr("src", "image/vdown.png");
+        }
     });
 
     // Handle form submission
@@ -135,29 +145,29 @@ function renderStocksFromLocalStorage() {
     
                 <div class="hideDetail">
                     <div class="valueDetail">
-                        <h2 class="tongvon" style="font-weight: 500;">${stock.tongvon}</h2>
-                        <h2 class="giatrithitruong" style="font-weight: 500;">${stock.giatrithitruong}</h2>
-                        <h2 class="lailo" style="font-weight: 500;">${stock.lailo}</h2>
+                        <h2 class="tongvon" style="font-weight: 600;">${stock.tongvon}</h2>
+                        <h2 class="giatrithitruong" style="font-weight: 600;">${stock.giatrithitruong}</h2>
+                        <h2 class="lailo" style="font-weight: 600;">${stock.lailo}</h2>
                     </div>
                     <div class="vol1">
-                        <h2 class="tongkl" style="font-weight: 500;">${stock.tongkl}</h2>
-                        <h2 class="klthuong" style="font-weight: 500;">${stock.klthuong}</h2>
-                        <h2 class="klfs" style="font-weight: 500;">${0}</h2>
-                        <h2 class="klkd" style="font-weight: 500;">${stock.klkd}</h2>
-                        <h2 class="outroom" style="font-weight: 500;">${stock.outroom}</h2>
+                        <h2 class="tongkl" style="font-weight: 600;">${stock.tongkl}</h2>
+                        <h2 class="klthuong" style="font-weight: 600;">${stock.klthuong}</h2>
+                        <h2 class="klfs" style="font-weight: 600;">${0}</h2>
+                        <h2 class="klkd" style="font-weight: 600;">${stock.klkd}</h2>
+                        <h2 class="outroom" style="font-weight: 600;">${stock.outroom}</h2>
                     </div>
                     <div class="vol2">
-                        <h2 class="klkhac" style="font-weight: 500;">${stock.klkhac}</h2>
-                        <h2 class="cpthuong" style="font-weight: 500;">${stock.cpthuong}</h2>
+                        <h2 class="klkhac" style="font-weight: 600;">${stock.klkhac}</h2>
+                        <h2 class="cpthuong" style="font-weight: 600;">${stock.cpthuong}</h2>
                     </div>
                     <div class="vol3">
-                        <h2 class="t0" style="font-weight: 500;">${stock.t0}</h2>
-                        <h2 class="t1" style="font-weight: 500;">${stock.t1}</h2>
-                        <h2 class="t2" style="font-weight: 500;">${stock.t2}</h2>
+                        <h2 class="t0" style="font-weight: 600;">${stock.t0}</h2>
+                        <h2 class="t1" style="font-weight: 600;">${stock.t1}</h2>
+                        <h2 class="t2" style="font-weight: 600;">${stock.t2}</h2>
                     </div>
                     <button class="deleteButton">Delete</button>
                 </div>
-            </div>`;
+            </div>`
 
             $(".stockContainer").append(stockHtml);
         });
