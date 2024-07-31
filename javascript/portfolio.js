@@ -52,18 +52,18 @@ $(document).ready(() => {
         var t2 = parseInt($("#t2Input").val()) || 0;
         var klkhac = parseInt($("#otherVolumeInput").val()) || 0;
         var cpthuong = parseInt($("#rewardVolumeInput").val()) || 0;
-
+        
         var tongkl = volume + t0 + t1 + t2 + outroom + klkhac + cpthuong;
-
+        
         var percentChangeValue = ((marketPrice - ownPrice) / ownPrice) * 100;
         var percentChange = (percentChangeValue >= 0 ? '+' : '-') + Math.abs(percentChangeValue).toFixed(2) + '%';
         var tongvon = ownPrice * tongkl;
         var giatrithitruong = marketPrice * tongkl;
-        var lailo = giatrithitruong - tongvon;
+        var lailoValue = giatrithitruong - tongvon;
+        var lailo = (lailoValue >= 0 ? '+' : '-') + Math.abs(lailoValue).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         var klkd = tongkl - t0 - t1 - t2;
         var klthuong = klkd - outroom || 0;
-
-
+        
         // Create a new stock element
         var newStock = {
             symbol: symbol,
@@ -73,12 +73,12 @@ $(document).ready(() => {
             percentChange: percentChange,
             tongvon: tongvon.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             giatrithitruong: giatrithitruong.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-            lailo: lailo.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+            lailo: lailo,
             tongkl: tongkl.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             klthuong: klthuong.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             klkhac: klkhac.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             klkd: klkd.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-            outroom: outroom.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+            outroom: outroom.toString().replace(/\B(?=(\d{3})+(?!d))/g, ","),
             t0: t0.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             t1: t1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             t2: t2.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
