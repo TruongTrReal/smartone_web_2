@@ -12,8 +12,8 @@
 @font-face {
     font-family: 'SF Medium';
     src: url('./sf_pro/SFPRODISPLAYMEDIUM.OTF') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 600;
+    font-style: 600;
 }
 
 /* Regular */
@@ -31,7 +31,7 @@
     margin: 0;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
-    font-family: 'SF Regular', sans-serif;
+    font-family: 'SF Medium', sans-serif;
 }
 
 .container {
@@ -79,7 +79,7 @@
 }
 
 .portfolioSummaryText {
-    font-family: 'SF Regular', sans-serif;
+    font-family: 'SF Medium', sans-serif;
     font-size: 3.5vw;
     font-weight: 600;
     margin-right: 6.7%;
@@ -87,7 +87,7 @@
 
 .totalPercentChangeBox {
     width: max-content;
-    font-family: 'SF Regular', sans-serif;
+    font-family: 'SF Medium', sans-serif;
     font-size: 2.8vw;
     font-weight: 500;
     margin-right: 6.7%;
@@ -152,8 +152,8 @@
         width: 100vw;
         top: 4.9vw;
         font-family: 'SF Bold', sans-serif;
-        font-size: 2.2vw;
-        font-weight: 200;
+        font-size: 2.4vw;
+        font-weight: 800;
         display: flex;
         justify-content: flex-end;
     }
@@ -178,18 +178,28 @@
     .ownPrice {
         position: absolute;
         right: 68.6vw;
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3.5vw;
     }
     
     .marketPrice {
         position: absolute;
         right: 53.7vw;
+        font-family: 'SF Medium', sans-serif;
+        font-size: 3.5vw;
     }
     
     .volume {
         position: absolute;
         right: 30.6vw;
+        font-family: 'SF Regular', sans-serif;
+        font-size: 3.5vw;
     }
-    
+
+    .percentChange {
+        font-family: 'SF Regular', sans-serif;
+        font-size: 3.5vw;
+    }
 
 }
 
@@ -198,8 +208,6 @@
     background-size: cover;
     width: 100%;
     height: 60vw;
-    font-family: 'SF Medium', sans-serif;
-    font-size: 1.9vw;
     font-weight: 500;
 
     .tongvon {
@@ -207,7 +215,8 @@
         top: 20.2vw;
         left: 6.5vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: center;
     }
@@ -217,7 +226,8 @@
         top: 20.2vw;
         left: 37.1vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: center;
     }
@@ -227,7 +237,8 @@
         top: 20.2vw;
         left: 68.1vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: center;
     }
@@ -237,7 +248,8 @@
         top: 30.1vw;
         left: 22.1vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -247,7 +259,8 @@
         top: 36.4vw;
         left: 22.1vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -257,7 +270,8 @@
         top: 42.9vw;
         left: 22.1vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -267,7 +281,8 @@
         top: 49.2vw;
         left: 22.1vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -277,7 +292,8 @@
         top: 55.4vw;
         left: 22.1vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -287,7 +303,8 @@
         top: 29.9vw;
         left: 69.5vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -297,7 +314,8 @@
         top: 33.9vw;
         left: 69.5vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -307,7 +325,8 @@
         top: 47.6vw;
         left: 69.5vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -317,7 +336,8 @@
         top: 52.1vw;
         left: 69.5vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
@@ -327,7 +347,8 @@
         top: 56.7vw;
         left: 69.5vw;
         width: 25vw;
-        /* background-color: aqua; */
+        font-family: 'SF Bold', sans-serif;
+        font-size: 3vw;
         display: flex;
         justify-content: flex-end;
     }
