@@ -86,10 +86,10 @@ function renderStocksFromLocalStorage() {
               <h2 class="symbol">${stock.symbol}
                 <img src="image/vdown.png" class="updownSymbol"/>
               </h2>
-              <h2 class="ownPrice" style="font-weight: 500;">${stock.ownPrice}</h2>
-              <h2 class="marketPrice" style="font-weight: 500;">${stock.marketPrice}</h2>
-              <h2 class="volume" style="font-weight: 500;">${stock.volume}</h2>
-              <h2 class="percentChange" style="font-weight: 500; margin-right: 4%; color: white;">${stock.percentChange}</h2>
+              <h2 class="ownPrice" style="font-weight: 600;">${stock.ownPrice}</h2>
+              <h2 class="marketPrice" style="font-weight: 600;">${stock.marketPrice}</h2>
+              <h2 class="volume" style="font-weight: 600;">${stock.volume}</h2>
+              <h2 class="percentChange" style="font-weight: 600; margin-right: 4%; color: white;">${stock.percentChange}</h2>
             </div>
           </div>
           <div class="hideDetail">
