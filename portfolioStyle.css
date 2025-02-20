@@ -185,19 +185,19 @@
     .marketPrice {
         position: absolute;
         right: 53.7vw;
-        font-family: 'SF Medium', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3.5vw;
     }
     
     .volume {
         position: absolute;
         right: 30.6vw;
-        font-family: 'SF Regular', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3.5vw;
     }
 
     .percentChange {
-        font-family: 'SF Regular', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3.5vw;
     }
 
