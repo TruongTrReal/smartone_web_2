@@ -77,7 +77,17 @@ $(document).ready(() => {
 
 function renderStocksFromLocalStorage() {
   if (typeof Storage !== "undefined") {
-    const stocks = JSON.parse(localStorage.getItem("stocks")) || [];
+    $(".stockContainer").empty(); // Clear the container before re-rendering
+    let stocks = JSON.parse(localStorage.getItem("stocks")) || [];
+
+    // Sort stocks by volume in descending order
+    stocks.sort((a, b) => {
+      // Remove commas and parse as integers
+      const volumeA = parseInt(a.volume.replace(/,/g, ""), 10);
+      const volumeB = parseInt(b.volume.replace(/,/g, ""), 10);
+      return volumeB - volumeA;
+    });
+
     stocks.forEach(stock => {
       const stockHtml = `
         <div class="stock" id="${stock.symbol}">
@@ -86,9 +96,9 @@ function renderStocksFromLocalStorage() {
               <h3 class="symbol">${stock.symbol}
                 <img src="image/vdown.png" class="updownSymbol"/>
               </h3>
-              <h3 class="ownPrice" style="">${stock.ownPrice}</h3>
-              <h3 class="marketPrice" style="">${stock.marketPrice}</h3>
-              <h3 class="volume" style="">${stock.volume}</h3>
+              <h3 class="ownPrice">${stock.ownPrice}</h3>
+              <h3 class="marketPrice">${stock.marketPrice}</h3>
+              <h3 class="volume">${stock.volume}</h3>
               <h3 class="percentChange" style="margin-right: 4%; color: white;">${stock.percentChange}</h3>
             </div>
           </div>
