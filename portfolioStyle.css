@@ -185,26 +185,26 @@
     .ownPrice {
         position: absolute;
         right: 68.6vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3.5vw;
     }
     
     .marketPrice {
         position: absolute;
         right: 53.7vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3.5vw;
     }
     
     .volume {
         position: absolute;
         right: 30.6vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3.5vw;
     }
 
     .percentChange {
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3.5vw;
     }
 
@@ -222,7 +222,7 @@
         top: 20.2vw;
         left: 6.5vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: center;
@@ -233,7 +233,7 @@
         top: 20.2vw;
         left: 37.1vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: center;
@@ -244,7 +244,7 @@
         top: 20.2vw;
         left: 68.1vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: center;
@@ -255,7 +255,7 @@
         top: 30.1vw;
         left: 22.1vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -266,7 +266,7 @@
         top: 36.4vw;
         left: 22.1vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -277,7 +277,7 @@
         top: 42.9vw;
         left: 22.1vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -288,7 +288,7 @@
         top: 49.2vw;
         left: 22.1vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -299,7 +299,7 @@
         top: 55.4vw;
         left: 22.1vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -310,7 +310,7 @@
         top: 29.9vw;
         left: 69.5vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -321,7 +321,7 @@
         top: 33.9vw;
         left: 69.5vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -332,7 +332,7 @@
         top: 47.6vw;
         left: 69.5vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -343,7 +343,7 @@
         top: 52.1vw;
         left: 69.5vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
@@ -354,7 +354,7 @@
         top: 56.7vw;
         left: 69.5vw;
         width: 25vw;
-        font-family: 'SF Semibold', sans-serif;
+        font-family: 'SF Bold', sans-serif;
         font-size: 3vw;
         display: flex;
         justify-content: flex-end;
