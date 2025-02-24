@@ -3,7 +3,7 @@
 /* Bold */
 @font-face {
     font-family: 'SF Bold';
-    src: url('SanFranciscoFont/SanFranciscoDisplay-Heavy.otf') format('opentype');
+    src: url('SanFranciscoFont/SanFranciscoDisplay-Regular.otf') format('opentype');
     font-weight: bold;
     font-style: bold;
 }
@@ -11,7 +11,7 @@
 /* Medium */
 @font-face {
     font-family: 'SF Medium';
-    src: url('SanFranciscoFont/SanFranciscoDisplay-Heavy.otf') format('opentype');
+    src: url('SanFranciscoFont/SanFranciscoDisplay-Regular.otf') format('opentype');
     font-weight: medium;
     font-style: medium;
 }
@@ -19,7 +19,7 @@
 /* Regular */
 @font-face {
     font-family: 'SF Regular';
-    src: url('SanFranciscoFont/SanFranciscoDisplay-Heavy.otf') format('opentype');
+    src: url('SanFranciscoFont/SanFranciscoDisplay-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
