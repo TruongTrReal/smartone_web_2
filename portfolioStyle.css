@@ -3,23 +3,23 @@
 /* Bold */
 @font-face {
     font-family: 'SF Bold';
-    src: url('./sf_pro/SFPRODISPLAYBOLD.OTF') format('opentype');
-    font-weight: 600;
-    font-style: 600;
+    src: url('SanFranciscoFont/SanFranciscoDisplay-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: bold;
 }
 
 /* Medium */
 @font-face {
     font-family: 'SF Medium';
-    src: url('./sf_pro/SFPRODISPLAYMEDIUM.OTF') format('opentype');
-    font-weight: 700;
-    font-style: 700;
+    src: url('SanFranciscoFont/SanFranciscoDisplay-Bold.otf') format('opentype');
+    font-weight: medium;
+    font-style: medium;
 }
 
 /* Regular */
 @font-face {
     font-family: 'SF Regular';
-    src: url('./sf_pro/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    src: url('SanFranciscoFont/SanFranciscoDisplay-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
