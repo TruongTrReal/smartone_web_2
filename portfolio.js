@@ -23,7 +23,7 @@ $(document).ready(() => {
 
     const symbol = $("#symbolInput").val();
     const ownPriceInput = parseInt($("#ownPriceInput").val()) || 0;
-    const ownPrice = (ownPriceInput - ownPriceInput * 0.0013).toFixed(0);
+    const ownPrice = Number((ownPriceInput - ownPriceInput * 0.0013).toFixed(0));
     const marketPrice = parseInt($("#marketPriceInput").val()) || 0;
     const volume = parseInt($("#volumeInput").val()) || 0;
     const outroom = parseInt($("#outroomInput").val()) || 0;
@@ -83,36 +83,36 @@ function renderStocksFromLocalStorage() {
         <div class="stock" id="${stock.symbol}">
           <div class="unhideDetail">
             <div class="detailTextBox">
-              <h2 class="symbol">${stock.symbol}
+              <h3 class="symbol">${stock.symbol}
                 <img src="image/vdown.png" class="updownSymbol"/>
-              </h2>
-              <h2 class="ownPrice" style="">${stock.ownPrice}</h2>
-              <h2 class="marketPrice" style="">${stock.marketPrice}</h2>
-              <h2 class="volume" style="">${stock.volume}</h2>
-              <h2 class="percentChange" style="margin-right: 4%; color: white;">${stock.percentChange}</h2>
+              </h3>
+              <h3 class="ownPrice" style="">${stock.ownPrice}</h3>
+              <h3 class="marketPrice" style="">${stock.marketPrice}</h3>
+              <h3 class="volume" style="">${stock.volume}</h3>
+              <h3 class="percentChange" style="margin-right: 4%; color: white;">${stock.percentChange}</h3>
             </div>
           </div>
           <div class="hideDetail">
             <div class="valueDetail">
-              <h2 class="tongvon" style="font-weight: 600;">${stock.tongvon}</h2>
-              <h2 class="giatrithitruong" style="font-weight: 600;">${stock.giatrithitruong}</h2>
-              <h2 class="lailo" style="font-weight: 600;">${stock.lailo}</h2>
+              <h3 class="tongvon" style="font-weight: 600;">${stock.tongvon}</h3>
+              <h3 class="giatrithitruong" style="font-weight: 600;">${stock.giatrithitruong}</h3>
+              <h3 class="lailo" style="font-weight: 600;">${stock.lailo}</h3>
             </div>
             <div class="vol1">
-              <h2 class="tongkl" style="font-weight: 600;">${stock.tongkl}</h2>
-              <h2 class="klthuong" style="font-weight: 600;">${stock.klthuong}</h2>
-              <h2 class="klfs" style="font-weight: 600;">0</h2>
-              <h2 class="klkd" style="font-weight: 600;">${stock.klkd}</h2>
-              <h2 class="outroom" style="font-weight: 600;">${stock.outroom}</h2>
+              <h3 class="tongkl" style="font-weight: 600;">${stock.tongkl}</h3>
+              <h3 class="klthuong" style="font-weight: 600;">${stock.klthuong}</h3>
+              <h3 class="klfs" style="font-weight: 600;">0</h3>
+              <h3 class="klkd" style="font-weight: 600;">${stock.klkd}</h3>
+              <h3 class="outroom" style="font-weight: 600;">${stock.outroom}</h3>
             </div>
             <div class="vol2">
-              <h2 class="klkhac" style="font-weight: 600;">${stock.klkhac}</h2>
-              <h2 class="cpthuong" style="font-weight: 600;">${stock.cpthuong}</h2>
+              <h3 class="klkhac" style="font-weight: 600;">${stock.klkhac}</h3>
+              <h3 class="cpthuong" style="font-weight: 600;">${stock.cpthuong}</h3>
             </div>
             <div class="vol3">
-              <h2 class="t0" style="font-weight: 600;">${stock.t0}</h2>
-              <h2 class="t1" style="font-weight: 600;">${stock.t1}</h2>
-              <h2 class="t2" style="font-weight: 600;">${stock.t2}</h2>
+              <h3 class="t0" style="font-weight: 600;">${stock.t0}</h3>
+              <h3 class="t1" style="font-weight: 600;">${stock.t1}</h3>
+              <h3 class="t2" style="font-weight: 600;">${stock.t2}</h3>
             </div>
             <button class="deleteButton">Delete</button>
           </div>
@@ -157,10 +157,10 @@ function updateColors() {
   changeColorBasedOnValue($("#todayProfit"), todayProfit);
   const totalGain = parseFloat($("#totalGainPercentage").text().replace('%', ''));
   changeColorBasedOnValue($("#totalGainPercentage"), totalGain);
-  $(".percentChange").css(totalGain > 0 
-    ? { "color": "#00ab55" }
-    : { "color": "#ce414a" }
-  );
+  $(".percentChange").each(function() {
+    const pctText = $(this).text().trim();
+    $(this).css("color", pctText.charAt(0) === "+" ? "#00ab55" : "#ce414a");
+  });  
 }
 
 function changeColorBasedOnValue(element, value) {
