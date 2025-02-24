@@ -3,7 +3,7 @@
 /* Bold */
 @font-face {
     font-family: 'SF Bold';
-    src: url('./sf_pro/SF-Pro-Text-Bold.otf') format('opentype');
+    src: url('./sf_pro/SF-Pro-Display-Bold.otf') format('opentype');
     font-weight: 800;
     font-style: 800;
 }
@@ -11,7 +11,7 @@
 /* Medium */
 @font-face {
     font-family: 'SF Medium';
-    src: url('./sf_pro/SF-Pro-Text-Medium.otf') format('opentype');
+    src: url('./sf_pro/SF-Pro-Display-Medium.otf') format('opentype');
     font-weight: 800;
     font-style: 800;
 }
@@ -19,7 +19,7 @@
 /* Regular */
 @font-face {
     font-family: 'SF Regular';
-    src: url('./sf_pro/SF-Pro-Text-Regular.otf') format('opentype');
+    src: url('./sf_pro/SF-Pro-Display-Regular.otf') format('opentype');
     font-weight: 800;
     font-style: 800;
 }
@@ -27,7 +27,7 @@
 /* Semibold */
 @font-face {
     font-family: 'SF Semibold';
-    src: url('./sf_pro/SF-Pro-Text-Semibold.otf') format('opentype');
+    src: url('./sf_pro/SF-Pro-Display-Semibold.otf') format('opentype');
     font-weight: 800;
     font-style: 800;
 }
